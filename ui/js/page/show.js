@@ -118,7 +118,8 @@ let FilePage = React.createClass({
       <main className="main--single-column">
         <section className="show-page-media">
           { this.props.contentType && this.props.contentType.startsWith('video/') ?
-            <Video className="video-embedded" uri={this.props.uri} metadata={metadata} outpoint={this.props.outpoint} /> :
+            <Video className="video-embedded" uri={this.props.uri} metadata={metadata} outpoint={this.props.outpoint} data-cast-title="{title}"
+       data-cast-description="{metadata.description}" poster="{metadata.thumbnail}" /> :
             (metadata ? <Thumbnail src={metadata.thumbnail} /> : <Thumbnail />) }
         </section>
         <section className="card">
