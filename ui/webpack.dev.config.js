@@ -38,4 +38,5 @@ module.exports = {
     ]
   },
   target: 'electron-main',
+  externals: ['mdns-js', 'mdns'],
 };
